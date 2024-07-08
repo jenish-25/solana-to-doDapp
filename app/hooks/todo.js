@@ -39,7 +39,7 @@ export function useTodo() {
                         setLastTodo(profileAccount.lastTodo)
                         setInitialized(true)
 
-                        const todoAccounts = await program.account.todoAccount.all([authorFilter(publicKey.toString())])
+                        const todoAccounts = await program.account.todoAccounts.all([authorFilter(publicKey.toString())])
                         setTodos(todoAccounts)
                     } else {
                         setInitialized(false)
